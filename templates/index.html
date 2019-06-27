@@ -5,7 +5,11 @@
 {% endblock %}
 
 {% block body %}
-<h1> ToDo Application </h1>
+<div class="todoList">
+    <h1>My To-Do List</h1>
+</div>
+<form action="/" method="POST">
+    <input type="text" name="content" id="content">
+    <input type="submit" value="Add Task">
+</form>
 {% endblock %}
-
-
