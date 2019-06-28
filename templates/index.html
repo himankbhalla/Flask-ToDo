@@ -7,6 +7,15 @@
 {% block body %}
 <div class="todoList">
     <h1>My To-Do List</h1>
+    <div class="items">
+        {% for task in tasks %}
+        <input id={{task.id}} type="checkbox">
+        <label for="item2">{{task.content}}</label>
+        {%endfor%}
+        <h2 class="done">Done</h2>
+        <h2 class="pending">Pending</h2>
+
+    </div>
 </div>
 <form action="/" method="POST">
     <input type="text" name="content" id="content">
