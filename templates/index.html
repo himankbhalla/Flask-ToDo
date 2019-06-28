@@ -9,11 +9,12 @@
     <h1>My To-Do List</h1>
     <div class="items">
         {% for task in tasks %}
-        <input id={{task.id}} type="checkbox">
-        <label for="item2">{{task.content}}</label>
+        <input id="{{task.id}}" type="checkbox">
+        <label for="{{task.id}}">{{task.content}}
+            <a href="/delete/{{task.id}}">X</a>
+        </label>
         {%endfor%}
-        <h2 class="done">Done</h2>
-        <h2 class="pending">Pending</h2>
+        <h2 class="pending">Todo</h2>
 
     </div>
 </div>
